@@ -1,0 +1,11 @@
+ <div class="container">
+  <h1>Welcome to Sinatra!</h1>
+  <p>Welcome User!</p>
+
+  <p>This is a list of your urls:</p>
+
+<% user = User.find(@id) %>
+<% user.urls.each do |url| %>
+<%= url.short_url %> <br>
+<%= url.long_url %>
+<% end %>
